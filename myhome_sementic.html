@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>My Homepage</title>
+    <meta charset="utf-8">
+    <style>
+        /* 공통 스타일 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #f2f5f9;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header, footer {
+            background: linear-gradient(to right, #4A90E2, #357ABD);
+            color: #fff;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* 헤더 내부 스타일 */
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        header p {
+            margin-top: 5px;
+            font-size: 1.1em;
+            color: #ffdd57;
+        }
+
+        nav {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: #ffdd57;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            background: #ffffff;
+            padding: 30px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        section {
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #4A90E2;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        ul li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #4A90E2;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            width: 200px;
+            text-align: center;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        ul li:hover {
+            background: #357ABD;
+            transform: scale(1.05);
+        }
+
+        /* 이미지 크기 조절 */
+        ul li img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        #timetable table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        #timetable caption {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #4A90E2;
+        }
+
+        #timetable th, #timetable td {
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+
+        #timetable th {
+            background-color: #357ABD;
+            color: white;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            padding: 20px;
+        }
+
+        /* 소셜 아이콘 스타일 */
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+
+        /* 구독 입력창 */
+        .newsletter {
+            margin-top: 20px;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            width: 200px;
+        }
+
+        .newsletter button {
+            padding: 10px 15px;
+            background-color: #ffdd57;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .newsletter button:hover {
+            background-color: #ffe77a;
+        }    
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 섹션 -->
+    <header>
+        <h1>My Homepage</h1>
+        <p>데이터 엔지니어로 가는 여정에 오신 것을 환영합니다!</p>
+        <nav>
+            <a href="#about">소개</a>
+            <a href="#projects">프로젝트</a>
+            <a href="#blog">블로그</a>
+            <a href="#contact">연락하기</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- 메인 콘텐츠 -->
+        <section id="about">
+            <h2>소개</h2>
+            <p>데이터 엔지니어를 꿈꾸며 열심히 공부하고 있는 강대웅입니다.</p>
+        </section>
+
+        <section>
+            <h2>현재 학습하고 있는 과목</h2>
+            <ul>
+                <li><img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python Icon" /> Python 언어</li>
+                <li><img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="Web Icon" /> HTML, CSS, JavaScript</li>
+                <li><img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="Database Icon" /> DBMS</li>
+            </ul>
+        </section>
+
+        <section id="timetable">
+            <table>
+                <caption>시간표</caption>
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>월요일</th>
+                        <th>화요일</th>
+                        <th>수요일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1교시</td>
+                        <td>Python 언어</td>
+                        <td>Web</td>
+                        <td>DBMS</td>
+                    </tr>
+                    <tr>
+                        <td>2교시</td>
+                        <td>Python 언어</td>
+                        <td>Web</td>
+                        <td>DBMS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- 푸터 섹션 -->
+    <footer>
+        <p>&copy; 2023 My Homepage. All rights reserved.</p>
+        <div class="newsletter">
+            <input type="email" placeholder="이메일 입력">
+            <button>구독하기</button>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
